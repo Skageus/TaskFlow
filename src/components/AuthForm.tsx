@@ -59,7 +59,7 @@ export function AuthForm() {
             <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-blue-500/20 text-white font-bold text-xl">
               T
             </div>
-            <h1 className="text-2xl font-bold tracking-tight text-slate-900">TaskFlow</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900">TaskFloww</h1>
             <p className="text-slate-500 text-sm mt-1">Professional task management</p>
           </div>
 
