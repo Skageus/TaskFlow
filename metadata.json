@@ -1,0 +1,6 @@
+{
+  "name": "SyncDo - Realtime Todo",
+  "description": "A production-ready collaborative todo list with real-time sync, offline support, and optimistic updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

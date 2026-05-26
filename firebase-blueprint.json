@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Public and private user data",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "avatar": { "type": "string" }
+      },
+      "required": ["username", "email"]
+    },
+    "Todo": {
+      "title": "Task Item",
+      "description": "A syncable todo task",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "important": { "type": "boolean" },
+        "dueDate": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["text", "completed", "important", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Root user documents"
+    },
+    "/users/{userId}/todos/{todoId}": {
+      "schema": "Todo",
+      "description": "User-specific tasks"
+    }
+  }
+}

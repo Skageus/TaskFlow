@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #2563eb; /* blue-600 */
+  --color-brand-surface: #f8fafc; /* slate-50 */
+  --color-brand-border: #e2e8f0; /* slate-200 */
+  --color-brand-text: #0f172a; /* slate-900 */
+  --color-brand-text-muted: #64748b; /* slate-500 */
+}
+
+@layer base {
+  body {
+    @apply bg-brand-surface text-brand-text font-sans antialiased;
+  }
+}
+
+@layer components {
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-premium {
+    @apply bg-white border border-brand-border rounded-xl shadow-sm transition-all hover:border-blue-300;
+  }
+  
+  .input-premium {
+    @apply w-full px-4 py-2 bg-slate-100 border-none rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 shadow-sm transition-all active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md font-medium text-sm transition-colors;
+  }
+  
+  .sidebar-link-active {
+    @apply bg-blue-50 text-blue-700;
+  }
+  
+  .sidebar-link-inactive {
+    @apply text-slate-600 hover:bg-slate-50;
+  }
+}
+
+@keyframes sync-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.sync-pulse {
+  animation: sync-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
